@@ -1,0 +1,297 @@
+{
+  "model_name": "Random Forest",
+  "features": [
+    "PM2.5",
+    "PM10",
+    "NO2",
+    "SO2",
+    "CO",
+    "O3"
+  ],
+  "categories": [
+    "Good",
+    "Satisfactory",
+    "Moderate",
+    "Poor",
+    "Very Poor",
+    "Severe"
+  ],
+  "dataset_source": "https://www.kaggle.com/datasets/rohanrao/air-quality-data-in-india",
+  "dataset_sha256": "0d84b21c3e4878bbad8df362f2ab05f61ad959538dddf5918e714077ed3c1847",
+  "trained_at_utc": "2026-11-22T09:14:31.974478+00:00",
+  "sklearn_version": "1.7.2",
+  "model_sha256": "2dbc5b22deedc5a7f2ccf1f0ed885d7a219b0ac863cb645573635f6acd9f649d",
+  "training_samples": 16018,
+  "test_samples": 8832,
+  "split_details": {
+    "Training": {
+      "start": "2015-01-01",
+      "end": "2018-07-08",
+      "rows": 10454
+    },
+    "Validation": {
+      "start": "2018-07-09",
+      "end": "2019-05-26",
+      "rows": 5564
+    },
+    "Test": {
+      "start": "2019-05-27",
+      "end": "2020-07-01",
+      "rows": 8832
+    }
+  },
+  "comparison": [
+    {
+      "model": "Dummy",
+      "accuracy": 0.38281811646297625,
+      "macro_precision": 0.06380301941049604,
+      "macro_recall": 0.16666666666666666,
+      "macro_f1": 0.09227969846633739,
+      "weighted_f1": 0.2119580421279281
+    },
+    {
+      "model": "Decision Tree",
+      "accuracy": 0.7070452911574406,
+      "macro_precision": 0.6448534535408865,
+      "macro_recall": 0.6947934814813461,
+      "macro_f1": 0.65415979015404,
+      "weighted_f1": 0.7172441857461235
+    },
+    {
+      "model": "Random Forest",
+      "accuracy": 0.7755212077641984,
+      "macro_precision": 0.7413913549221299,
+      "macro_recall": 0.7142262863606591,
+      "macro_f1": 0.7243391181201123,
+      "weighted_f1": 0.774974632866232
+    }
+  ],
+  "validation_trials": [
+    {
+      "model": "Dummy",
+      "parameters": "DummyClassifier(strategy='most_frequent')",
+      "accuracy": 0.38281811646297625,
+      "macro_precision": 0.06380301941049604,
+      "macro_recall": 0.16666666666666666,
+      "macro_f1": 0.09227969846633739,
+      "weighted_f1": 0.2119580421279281
+    },
+    {
+      "model": "Decision Tree",
+      "parameters": "DecisionTreeClassifier(class_weight='balanced', max_depth=6, min_samples_leaf=8,\n                       min_samples_split=10, random_state=42)",
+      "accuracy": 0.6193386053199137,
+      "macro_precision": 0.6137963514930777,
+      "macro_recall": 0.6933736654943382,
+      "macro_f1": 0.6052258291192462,
+      "weighted_f1": 0.6384924854146729
+    },
+    {
+      "model": "Decision Tree",
+      "parameters": "DecisionTreeClassifier(class_weight='balanced', max_depth=10,\n                       min_samples_leaf=5, min_samples_split=10,\n                       random_state=42)",
+      "accuracy": 0.7070452911574406,
+      "macro_precision": 0.6448534535408865,
+      "macro_recall": 0.6947934814813461,
+      "macro_f1": 0.65415979015404,
+      "weighted_f1": 0.7172441857461235
+    },
+    {
+      "model": "Decision Tree",
+      "parameters": "DecisionTreeClassifier(class_weight='balanced', max_depth=16,\n                       min_samples_leaf=3, min_samples_split=10,\n                       random_state=42)",
+      "accuracy": 0.6874550682961897,
+      "macro_precision": 0.6199673073193047,
+      "macro_recall": 0.6684119841351355,
+      "macro_f1": 0.6346509636318554,
+      "weighted_f1": 0.694589950730276
+    },
+    {
+      "model": "Random Forest",
+      "parameters": "RandomForestClassifier(class_weight='balanced_subsample', max_depth=12,\n                       min_samples_leaf=2, n_estimators=160, n_jobs=-1,\n                       random_state=42)",
+      "accuracy": 0.7755212077641984,
+      "macro_precision": 0.7413913549221299,
+      "macro_recall": 0.7142262863606591,
+      "macro_f1": 0.7243391181201123,
+      "weighted_f1": 0.774974632866232
+    },
+    {
+      "model": "Random Forest",
+      "parameters": "RandomForestClassifier(class_weight='balanced_subsample', max_depth=20,\n                       min_samples_leaf=2, n_estimators=160, n_jobs=-1,\n                       random_state=42)",
+      "accuracy": 0.7728253055355859,
+      "macro_precision": 0.7378607207479435,
+      "macro_recall": 0.6929715414047374,
+      "macro_f1": 0.7107876355681803,
+      "weighted_f1": 0.7707157017249109
+    },
+    {
+      "model": "Random Forest",
+      "parameters": "RandomForestClassifier(class_weight='balanced_subsample', n_estimators=160,\n                       n_jobs=-1, random_state=42)",
+      "accuracy": 0.7656362329259525,
+      "macro_precision": 0.7344874170270513,
+      "macro_recall": 0.6571227922078317,
+      "macro_f1": 0.6808718402457531,
+      "weighted_f1": 0.7601025119831643
+    }
+  ],
+  "test_metrics": {
+    "accuracy": 0.7775135869565217,
+    "macro_precision": 0.7557944870188931,
+    "macro_recall": 0.7630355290815141,
+    "macro_f1": 0.75749297000519,
+    "weighted_f1": 0.7772471225564754
+  },
+  "classification_report": {
+    "Good": {
+      "precision": 0.650319829424307,
+      "recall": 0.6608884073672806,
+      "f1-score": 0.6555615260612574,
+      "support": 923.0
+    },
+    "Satisfactory": {
+      "precision": 0.7874911158493249,
+      "recall": 0.8558187435633368,
+      "f1-score": 0.8202344231955583,
+      "support": 3884.0
+    },
+    "Moderate": {
+      "precision": 0.8506437768240344,
+      "recall": 0.7142342342342343,
+      "f1-score": 0.7764936336924584,
+      "support": 2775.0
+    },
+    "Poor": {
+      "precision": 0.6366083445491252,
+      "recall": 0.734472049689441,
+      "f1-score": 0.6820475847152127,
+      "support": 644.0
+    },
+    "Very Poor": {
+      "precision": 0.7664835164835165,
+      "recall": 0.7361477572559367,
+      "f1-score": 0.7510094212651414,
+      "support": 379.0
+    },
+    "Severe": {
+      "precision": 0.8432203389830508,
+      "recall": 0.8766519823788547,
+      "f1-score": 0.8596112311015118,
+      "support": 227.0
+    },
+    "accuracy": 0.7775135869565217,
+    "macro avg": {
+      "precision": 0.7557944870188931,
+      "recall": 0.7630355290815141,
+      "f1-score": 0.75749297000519,
+      "support": 8832.0
+    },
+    "weighted avg": {
+      "precision": 0.782527312136566,
+      "recall": 0.7775135869565217,
+      "f1-score": 0.7772471225564754,
+      "support": 8832.0
+    }
+  },
+  "confusion_matrix": [
+    [
+      610,
+      310,
+      2,
+      1,
+      0,
+      0
+    ],
+    [
+      319,
+      3324,
+      239,
+      1,
+      1,
+      0
+    ],
+    [
+      8,
+      579,
+      1982,
+      205,
+      1,
+      0
+    ],
+    [
+      1,
+      6,
+      99,
+      473,
+      63,
+      2
+    ],
+    [
+      0,
+      0,
+      5,
+      60,
+      279,
+      35
+    ],
+    [
+      0,
+      2,
+      3,
+      3,
+      20,
+      199
+    ]
+  ],
+  "absent_test_classes": [],
+  "feature_importance": {
+    "PM2.5": 0.37891474097952477,
+    "PM10": 0.19583796336911366,
+    "NO2": 0.07400007335981629,
+    "SO2": 0.07830702543963533,
+    "CO": 0.1990157979276071,
+    "O3": 0.07392439892430283
+  },
+  "training_ranges": {
+    "PM2.5": {
+      "min": 1.72,
+      "max": 914.94,
+      "median": 57.665
+    },
+    "PM10": {
+      "min": 0.03,
+      "max": 917.08,
+      "median": 111.56
+    },
+    "NO2": {
+      "min": 0.01,
+      "max": 362.21,
+      "median": 25.39
+    },
+    "SO2": {
+      "min": 0.04,
+      "max": 171.32,
+      "median": 8.87
+    },
+    "CO": {
+      "min": 0.0,
+      "max": 175.81,
+      "median": 1.01
+    },
+    "O3": {
+      "min": 0.1,
+      "max": 257.73,
+      "median": 32.04
+    }
+  },
+  "cleaning": {
+    "raw_rows": 29531,
+    "duplicates_removed": 0,
+    "missing_labels_removed": 4681,
+    "negative_counts": {
+      "PM2.5": 0,
+      "PM10": 0,
+      "NO2": 0,
+      "SO2": 0,
+      "CO": 0,
+      "O3": 0,
+      "AQI": 0
+    }
+  }
+}
